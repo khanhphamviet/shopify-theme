@@ -112,7 +112,7 @@
             "title": "Embroidery Supplies",
             "text": "",
             "link_label": "Embroidery Supplies",
-            "link": "/pages/刺しゅう用品"
+            "link": "shopify://pages/embroidery-supplies"
           }
         },
         "column_QK94M8": {
@@ -122,7 +122,7 @@
             "title": "Sashiko",
             "text": "",
             "link_label": "Sashiko",
-            "link": "/pages/刺し子"
+            "link": "shopify://pages/sashiko"
           }
         },
         "column_aPmgAX": {
@@ -132,7 +132,7 @@
             "title": "100 Neesan",
             "text": "",
             "link_label": "100 Neesan",
-            "link": "/pages/100ネエサン"
+            "link": "shopify://pages/100-neesan"
           }
         },
         "column_nfRyVB": {
@@ -142,7 +142,7 @@
             "title": "Knitting & Crochet",
             "text": "",
             "link_label": "Knitting & Crochet",
-            "link": "/pages/編みもの"
+            "link": "shopify://pages/knitting-crochet"
           }
         }
       },
