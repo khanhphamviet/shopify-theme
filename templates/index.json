@@ -65,7 +65,7 @@
             "title": "Embroidery Fabric",
             "text": "",
             "link_label": "Embroidery Fabric",
-            "link": "/pages/刺しゅう布"
+            "link": "shopify://pages/embroidery-fabric"
           }
         },
         "column_k73NNC": {
@@ -75,7 +75,7 @@
             "title": "Embroidery Kit",
             "text": "",
             "link_label": "Embroidery Kit",
-            "link": "/pages/刺しゅうキット"
+            "link": "shopify://pages/embroidery-kits"
           }
         }
       },
