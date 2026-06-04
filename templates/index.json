@@ -173,18 +173,6 @@
     "collection_list_VcT97G": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_gyzgfL": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "atelier-de-nora-embroidery"
-          }
-        },
-        "featured_collection_4rmddY": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "celebratory-sashiko-cloth"
-          }
-        },
         "featured_collection_KRrdbF": {
           "type": "featured_collection",
           "settings": {
@@ -213,8 +201,6 @@
         }
       },
       "block_order": [
-        "featured_collection_gyzgfL",
-        "featured_collection_4rmddY",
         "featured_collection_KRrdbF",
         "featured_collection_jFjHxc",
         "featured_collection_zCeibz",
