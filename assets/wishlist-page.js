@@ -1,7 +1,8 @@
 (function () {
   const grid = document.getElementById('wishlist-grid');
-  const emptyEl = document.querySelector('.wishlist-empty');
-  const loadingEl = document.querySelector('.wishlist-loading');
+  const emptyEl = document.getElementById('wishlist-empty');
+  const emptyText = document.getElementById('wishlist-empty-text');
+  const loadingEl = document.getElementById('wishlist-loading');
 
   function formatPrice(amount, currencyCode) {
     return new Intl.NumberFormat('en-US', {
@@ -68,8 +69,8 @@
 
       if (res.status === 401) {
         loadingEl.style.display = 'none';
-        emptyEl.style.display = '';
-        emptyEl.querySelector('p').textContent = 'Please log in to view your wishlist.';
+        emptyEl.style.display = 'flex';
+        emptyText.textContent = 'Please log in to view your wishlist.';
         return;
       }
 
@@ -79,15 +80,15 @@
       loadingEl.style.display = 'none';
 
       if (!data.products || data.products.length === 0) {
-        emptyEl.style.display = '';
+        emptyEl.style.display = 'flex';
         return;
       }
 
       renderProducts(data.products);
     } catch (err) {
       loadingEl.style.display = 'none';
-      emptyEl.style.display = '';
-      emptyEl.querySelector('p').textContent = 'Something went wrong. Please refresh the page.';
+      emptyEl.style.display = 'flex';
+      emptyText.textContent = 'Something went wrong. Please refresh the page.';
       console.error('[Wishlist]', err);
     }
   }
