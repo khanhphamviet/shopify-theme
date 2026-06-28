@@ -1,1 +1,35 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":28,"padding_bottom":28}}},"order":["main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_liquid_qpWKMi": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<div class=\"wishlist-page page-width\">\n  <h1 class=\"wishlist-page__title\">Sản phẩm yêu thích</h1>\n\n  <div class=\"wishlist-grid\" id=\"wishlist-grid\"></div>\n\n  <div class=\"wishlist-empty\" style=\"display:none;\">\n    <p>Bạn chưa có sản phẩm yêu thích nào.</p>\n    <a href=\"/collections/all\" class=\"button\">Khám phá sản phẩm</a>\n  </div>\n\n  <div class=\"wishlist-loading\">\n    <p>Đang tải...</p>\n  </div>\n</div>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_liquid_qpWKMi"
+  ]
+}
