@@ -21,7 +21,7 @@
       "type": "custom-liquid",
       "name": "t:sections.custom-liquid.presets.name",
       "settings": {
-        "custom_liquid": "<div class=\"wishlist-page page-width\">\n  <h1 class=\"wishlist-page__title\">Sản phẩm yêu thích</h1>\n\n  <div class=\"wishlist-grid\" id=\"wishlist-grid\"></div>\n\n  <div class=\"wishlist-empty\" style=\"display:none;\">\n    <p>Bạn chưa có sản phẩm yêu thích nào.</p>\n    <a href=\"/collections/all\" class=\"button\">Khám phá sản phẩm</a>\n  </div>\n\n  <div class=\"wishlist-loading\">\n    <p>Đang tải...</p>\n  </div>\n</div>",
+        "custom_liquid": "<div class=\"wishlist-page page-width\">\n  <h1 class=\"wishlist-page__title\">Sản phẩm yêu thích</h1>\n  <div class=\"wishlist-grid\" id=\"wishlist-grid\"></div>\n  <div class=\"wishlist-empty\" style=\"display:none;\">\n    <p>Bạn chưa có sản phẩm yêu thích nào.</p>\n    <a href=\"/collections/all\" class=\"button\">Khám phá sản phẩm</a>\n  </div>\n  <div class=\"wishlist-loading\">\n    <p>Đang tải...</p>\n  </div>\n</div>\n\n{{ 'wishlist-page.js' | asset_url | script_tag }}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
