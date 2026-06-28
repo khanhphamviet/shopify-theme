@@ -793,7 +793,7 @@
       {{ product | structured_data }}
     </script>
   </div>
-  {{ 'wishlist-btn.js' | asset_url | script_tag }}
+  <script src="{{ 'wishlist-btn.js' | asset_url }}" defer></script>
 </product-info>
 
 {% schema %}
