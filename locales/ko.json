@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "general": {
     "password_page": {
@@ -217,6 +226,10 @@
     }
   },
   "templates": {
+    "404": {
+      "title": "페이지를 찾을 수 없음",
+      "subtext": "404"
+    },
     "search": {
       "no_results": "\"{{ terms }}\"에 대한 검색 결과가 없습니다. 철자를 확인하거나 다른 단어/문구를 사용해 보십시오.",
       "results_with_count": {
@@ -260,10 +273,6 @@
         "error_heading": "다음을 조정하십시오.",
         "title": "연락처 양식"
       }
-    },
-    "404": {
-      "title": "페이지를 찾을 수 없음",
-      "subtext": "404"
     }
   },
   "sections": {
@@ -526,5 +535,14 @@
       "expanded": "기프트 카드 수신자 양식 펼치기",
       "collapsed": "기프트 카드 수신자 양식 접기"
     }
+  },
+  "wishlist": {
+    "title": "위시리스트",
+    "empty_title": "위시리스트가 비어 있습니다",
+    "empty_text": "마음에 드는 상품을 저장하고 여기서 찾아보세요.",
+    "browse": "상품 둘러보기",
+    "login_required": "위시리스트를 보려면 로그인해 주세요.",
+    "error": "오류가 발생했습니다. 페이지를 새로 고침해 주세요.",
+    "remove": "위시리스트에서 제거"
   }
 }
