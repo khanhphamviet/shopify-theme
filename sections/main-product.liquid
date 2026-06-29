@@ -58,6 +58,38 @@
 
 
 
+
+/* wishlist-app:css-start */
+.wishlist-btn--overlay {
+  position: absolute; top: 12px; right: 12px; z-index: 2;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.9); border: none; border-radius: 50%;
+  cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease;
+}
+.wishlist-btn--overlay:hover { transform: scale(1.1); }
+.wishlist-btn--overlay .icon-heart { color: #555; transition: all 0.2s ease; }
+.wishlist-btn--overlay.active .icon-heart { fill: #e63946; stroke: #e63946; color: #e63946; }
+.wishlist-btn--overlay.is-loading { opacity: 0.6; pointer-events: none; }
+
+.share-btn--overlay {
+  position: absolute; top: 56px; right: 12px; z-index: 2;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.9); border: none; border-radius: 50%;
+  cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease;
+}
+.share-btn--overlay:hover { transform: scale(1.1); }
+.share-btn--overlay .icon-share,
+.share-btn--overlay .icon-check { position: absolute; transition: opacity 0.2s ease, transform 0.2s ease; }
+.share-btn--overlay .icon-share { color: #555; opacity: 1; transform: scale(1); }
+.share-btn--overlay .icon-check { color: #22a861; opacity: 0; transform: scale(0.5); }
+.share-btn--overlay.copied { transform: scale(1.15); }
+.share-btn--overlay.copied .icon-share { opacity: 0; transform: scale(0.5); }
+.share-btn--overlay.copied .icon-check { opacity: 1; transform: scale(1); }
+/* wishlist-app:css-end */
 {%- endstyle -%}
 
   <script src="{{ 'product-info.js' | asset_url }}" defer="defer"></script>
@@ -97,11 +129,7 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper" style="position: relative">
-        {% render 'product-media-gallery', variant_images: variant_images %}
-
-
-
-
+        {% render 'product-media-gallery', variant_images: variant_images %}<!-- wishlist-app:btn-start -->
         <button
           type="button"
           class="wishlist-btn wishlist-btn--overlay"
@@ -113,6 +141,29 @@
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
           </svg>
         </button>
+        <button
+          type="button"
+          class="share-btn share-btn--overlay"
+          aria-label="Copy product link"
+        >
+          <svg class="icon-share" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"/>
+            <circle cx="6" cy="12" r="3"/>
+            <circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+          <svg class="icon-check" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </button>
+        <!-- wishlist-app:btn-end -->
+
+
+
+
+
+        
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
@@ -772,6 +823,7 @@
       {{ product | structured_data }}
     </script>
   </div>
+  <script src="{{ 'wishlist-btn.js' | asset_url }}" defer></script>
 </product-info>
 
 {% schema %}
